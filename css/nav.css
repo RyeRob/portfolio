@@ -100,7 +100,7 @@
     justify-content: center;
 }
 .nav-wrap .nav > div {
-    background: var(--menu-color);
+    background: var(--menu-background);
     border-radius: 50%;
     width: 200vw;
     height: 200vw;

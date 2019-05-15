@@ -48,10 +48,11 @@ topBtn.addEventListener('click', function() {
 });
 
 for (var i = 0; i < aboutBtn.length; i++) {
-    aboutBtn[i].addEventListener('click', function() {
+    aboutBtn[i].addEventListener('click', function(targetPosition) {
         if (menuControl.checked === true) {
             menuControl.checked = false;
         }
         scrolling('.about', 1000);
+        console.log(targetPosition);
     });
 }

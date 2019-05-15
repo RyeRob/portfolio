@@ -1,14 +1,13 @@
 /* --- Variables --- */
 :root {
-    --primary-color: rgba(0, 0, 0, 0.80);
-    --menu-color: rgb(0, 0, 0, 0.95);
+    --primary-color:rgba(0, 0, 0, 0.8);
+    --accent-color:rgba(51, 153, 255, 1);
     --font-color:#fff;
-    --extra-font-color:#3399ff;
-    --menu-speed: 1.3s;
     --burger-color:#fff;
-    --burger-background:rgba(0, 0, 0, 0.30); 
+    --burger-background:rgba(0, 0, 0, 0.3);
+    --menu-background:rgb(0, 0, 0, 0.95);
+    --menu-speed: 1.3s;
 }
-
 /* --- General Style --- */
 * {
     box-sizing: border-box;
@@ -19,7 +18,6 @@ body {
     font-family: Catamaran, Helvetica, Arial sans-serif;
     line-height: 1.2;
 }
-
 /* --- Landing Section --- */
 .container {
     max-width: 960px;
@@ -33,11 +31,10 @@ body {
     position:relative;
     background-color: var(--primary-color);
 }
-
 .landing:before {
     content:'';
     /* Photo by Steve Johnson from pexels.com */
-    background:url(../images/abstract1.jpg) no-repeat center center/cover;
+    /* background:url(../images/abstract1-min.jpg) no-repeat center center/cover; */
     top:0;
     left:0;
     width:100%;
@@ -84,7 +81,7 @@ body {
 .about:before {
     content:'';
     /* Photo by Steve Johnson from pexels.com */
-    background:url(../images/abstract3.jpg) no-repeat center center/cover;
+    /* background:url(../images/abstract3-min.jpg) no-repeat center center/cover; */
     top:0;
     left:0;
     width:100%;
@@ -92,15 +89,13 @@ body {
     position:absolute;
     z-index:-1;
 }
-
 /* --- Footer --- */
 .footer {
-    background-color: var(--primary-background);
-    color: var(--primary-font);
+    background-color: var(--accent-color);
+    color: var(--font-color);
     height:15vh;
     text-align:center;
 }
 .footer-name{
     padding-top:40px;
 }
-
