@@ -1,0 +1,136 @@
+.nav-wrap {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+}
+.open-nav {
+    transform: scale(2.2);
+}
+.nav-wrap .open-nav {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    opacity:0;
+}
+/* Making The Hamburger */
+.nav-wrap .burger {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    width:80px;
+    height:80px;
+    padding:1rem;
+    background-color: var(--burger-background);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Meat */
+.nav-wrap .burger > div {
+    position:relative;
+    width:100%;
+    height:2px;
+    background-color:var(--burger-colour);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:all 0.6s ease;
+}
+/* Bun Top */
+.nav-wrap .burger > div:before,
+.nav-wrap .burger > div:after {
+    content:'';
+    position:absolute;
+    z-index:1;
+    top:-10px;
+    width:100%;
+    height:2px;
+    background:inherit;
+}
+/* Bun bottom */
+.nav-wrap .burger > div:after {
+    top:10px;
+}
+
+/* --- Hamburger Menu Animations --- */
+/* rotate burger on click */
+.nav-wrap .open-nav:checked + .burger > div {
+    transform: rotate(135deg);
+}
+/* turn hamburger into x */
+.nav-wrap .open-nav:checked + .burger > div:before,
+.nav-wrap .open-nav:checked + .burger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* rotate x on hover */
+.nav-wrap .open-nav:checked:hover + .burger > div {
+    transform: rotate(225deg);
+}
+/* animate menu */
+.nav-wrap .open-nav:checked ~ .nav {
+    visibility: visible;
+}
+.nav-wrap .open-nav:checked ~ .nav > div {
+    transform:scale(1);
+    transition-duration:var(--menu-speed);
+}
+.nav-wrap .open-nav:checked ~ .nav > div > div {
+    opacity: 1;
+    transition:opacity 0.4s ease;
+}
+.nav-wrap .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-wrap .nav > div {
+    background: var(--burger-colour);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display:flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+.nav-wrap .nav > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height:100vh;
+    opacity:0;
+    transition: opacity 0.5s ease;
+}
+.nav-wrap .nav > div > div > ul > li {
+    list-style:none;
+    color: var(--burger-color);
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.nav-wrap .nav > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+@media only screen and (min-width: 1100px) {
+    /* .nav-wrap {
+        display:none;
+    } */
+}
