@@ -1,16 +1,15 @@
-/* Custom Properties */
+/* --- Variables --- */
 :root {
     --primary-color: rgba(0, 0, 0, 0.80);
-    --overlay-color: rgb(5, 47, 59, 0.95);
+    --menu-color: rgb(0, 0, 0, 0.95);
     --font-color:#fff;
     --extra-font-color:#3399ff;
     --menu-speed: 1.3s;
-    --burger-colour:#fff;
-    --burger-background:rgba(0, 0, 0, 0.30);
-    --menu-background: 
+    --burger-color:#fff;
+    --burger-background:rgba(0, 0, 0, 0.30); 
 }
 
-/* General Styles */
+/* --- General Style --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +20,7 @@ body {
     line-height: 1.2;
 }
 
-/* Landing Area Styles */
+/* --- Landing Section --- */
 .container {
     max-width: 960px;
     margin: auto;
@@ -64,7 +63,6 @@ body {
     font-size:1.3rem;
 }
 .btn {
-    display:inline-block;
     border: none;
     background-color: var(--primary-color);
     color: var(--font-color);
@@ -76,8 +74,26 @@ body {
 .btn:hover {
     opacity: 0.5;
 }
+/* --- About Section --- */
+.about {
+    color: var(--font-color);
+    height:100vh;
+    position:relative;
+    background-color: var(--primary-color);
+}
+.about:before {
+    content:'';
+    /* Photo by Steve Johnson from pexels.com */
+    background:url(../images/abstract3.jpg) no-repeat center center/cover;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:-1;
+}
 
-/* Footer Styling */
+/* --- Footer --- */
 .footer {
     background-color: var(--primary-background);
     color: var(--primary-font);
@@ -87,3 +103,4 @@ body {
 .footer-name{
     padding-top:40px;
 }
+

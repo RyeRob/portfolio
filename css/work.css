@@ -3,12 +3,9 @@
     height:100vh;
     position:relative;
     background-color: var(--primary-color);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: calc(100vh - 4em);
-    grid-gap: 2em;
-    margin: 0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
 }
 .work-image{
     flex-shrink:0;
@@ -18,6 +15,7 @@
 .work-1{
     grid-column:1;
     grid-row:2;
+    padding-left:5rem;
 }
 .work-2{
     grid-column:2;
@@ -26,9 +24,24 @@
 .work-3{
     grid-column:3;
     grid-row:2;
+    padding-right:5rem;
+}
+.work-1 > .work-display {
+    background:url(../images/humbieHelper.png) no-repeat center center/cover;
+
+}
+.work-2 > .work-display {
+    background:url(../images/stats-map.png) no-repeat center center/cover;
+
+}
+.work-3 > .work-display {
+    background:url(../images/abstract1.jpg) no-repeat center center/cover;
+
 }
 .work:before {
     content:'';
+    /* Photo from https://www.pexels.com/@rawpixel */
+    /* https://www.pexels.com/@francesco-ungaro */
     background:url(../images/abstract2.jpg) no-repeat center center/cover;
     top:0;
     left:0;
@@ -42,9 +55,9 @@
     grid-column:2;
     grid-row:1;
     display:flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items:center;
-    justify-content: center;
+    justify-content:center;
     text-align:center;
 }
 .work h3 {
@@ -53,29 +66,48 @@
 }
 .work h2 h3 {
     display:block;
-    font-family: Philosopher, sans-serif
+    font-family:Philosopher, sans-serif;
 }
 .work-display {
-    border: 1px solid #fff;
+    border:1px solid #fff;
     border-radius: 20px;
-    /* display: inline-block; */
-    width:25vw;
-    height:20vh;
-    overflow: hidden;
-}
-.work-display img {
-    margin:auto;
-}
-.work-card {
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    padding: 20px;
-    margin: 10px;
+    width:22vw;
+    height:22vh;
+    overflow:hidden;
+    margin:0 auto;
 }
 .work-desc {
     text-align:center;
 }
-#humbie {
-    background:url(../images/humbieHelper.png)no-repeat center center/cover;
+.btn-container {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .about-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* --- Media Queries --- */
+@media only screen and (max-width: 1024px) {
+    .work {
+        display:block;
+    }
+    .work > div {
+        padding-top:5rem;
+    }
+    .work-1{
+        padding-left:0;
+    }
+    .work-3{
+        padding-right:0;
+    }
+    .work-display{
+        height:15vh;
+    }
 }

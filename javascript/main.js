@@ -27,9 +27,10 @@ function scrolling(target,duration){
     requestAnimationFrame(animation);
 }
 
-var mainBtn = document.querySelector('.btn');
+var mainBtn = document.querySelector('.main-btn');
 var workBtn = document.querySelector('.work-btn');
 var topBtn = document.querySelector('.top-btn');
+var aboutBtn = document.querySelectorAll('.about-btn');
 var menuControl = document.querySelector('.open-nav');
 
 mainBtn.addEventListener('click', function() {
@@ -45,3 +46,12 @@ topBtn.addEventListener('click', function() {
     menuControl.checked = false;
     scrolling('.landing', 1000);
 });
+
+for (var i = 0; i < aboutBtn.length; i++) {
+    aboutBtn[i].addEventListener('click', function() {
+        if (menuControl.checked === true) {
+            menuControl.checked = false;
+        }
+        scrolling('.about', 1000);
+    });
+}
