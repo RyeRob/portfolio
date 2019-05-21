@@ -1,4 +1,4 @@
-.work {
+#work {
     color: var(--font-color);
     height:100vh;
     position:relative;
@@ -26,23 +26,23 @@
     grid-row:2;
     padding-right:5rem;
 }
-.work-1 > .work-display {
+.work-1 .work-display {
     background:url(../images/humbieHelper.png) no-repeat center center/cover;
 
 }
-.work-2 > .work-display {
+.work-2 .work-display {
     background:url(../images/stats-map.png) no-repeat center center/cover;
 
 }
-.work-3 > .work-display {
+.work-3 .work-display {
     background:url(../images/abstract1.jpg) no-repeat center center/cover;
 
 }
-.work:before {
+#work:before {
     content:'';
     /* Photo from https://www.pexels.com/@rawpixel */
     /* https://www.pexels.com/@francesco-ungaro */
-    /* background:url(../images/abstract2-min.jpg) no-repeat center center/cover; */
+    background:url(../images/abstract2-med.jpg) no-repeat center center/cover;
     top:0;
     left:0;
     width:100%;
@@ -50,7 +50,7 @@
     position:absolute;
     z-index:-1;
 }
-.work h2 {
+#work h2 {
     font-size:2.5rem;
     grid-column:2;
     grid-row:1;
@@ -60,19 +60,19 @@
     justify-content:center;
     text-align:center;
 }
-.work h3 {
+#work h3 {
     font-size:1.8rem;
     padding: 1rem;
 }
-.work h2 h3 {
+#work h2 h3 {
     display:block;
     font-family:Philosopher, sans-serif;
 }
 .work-display {
-    border:1px solid #fff;
-    border-radius: 20px;
-    width:22vw;
-    height:22vh;
+    border:2px solid #fff;
+    border-radius:30px;
+    width:20vw;
+    height:24vh;
     overflow:hidden;
     margin:0 auto;
 }
@@ -87,18 +87,13 @@
     align-items: center;
     justify-content: center;
 }
-/* .about-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 /* --- Media Queries --- */
 @media only screen and (max-width: 1024px) {
-    .work {
-        display:block;
+    #work {
+        padding-top:5rem;
     }
-    .work > div {
+    #work > div {
         padding-top:5rem;
     }
     .work-1{
@@ -108,6 +103,30 @@
         padding-right:0;
     }
     .work-display{
-        height:15vh;
+        height:12vh;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    #work {
+        display:block;
+    }
+    .work-display{
+        height:10vh;
+        width:30vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #work {
+        height:138vh;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    #work {
+        height:170vh;
+    }
+}
+
+

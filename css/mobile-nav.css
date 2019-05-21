@@ -1,4 +1,6 @@
-.nav-wrap {
+
+/* --- Mobile Navigation --- */
+.mobile-nav {
     position:fixed;
     top:0;
     left:0;
@@ -7,7 +9,7 @@
 .open-nav {
     transform: scale(2.2);
 }
-.nav-wrap .open-nav {
+.mobile-nav .open-nav {
     position:absolute;
     top:0;
     left:0;
@@ -18,7 +20,7 @@
     opacity:0;
 }
 /* Making The Hamburger */
-.nav-wrap .burger {
+.mobile-nav .burger {
     position:absolute;
     top:0;
     left:0;
@@ -33,7 +35,7 @@
 }
 
 /* Meat */
-.nav-wrap .burger > div {
+.mobile-nav .burger > div {
     position:relative;
     width:100%;
     height:2px;
@@ -44,8 +46,8 @@
     transition:all 0.6s ease;
 }
 /* Bun Top */
-.nav-wrap .burger > div:before,
-.nav-wrap .burger > div:after {
+.mobile-nav .burger > div:before,
+.mobile-nav .burger > div:after {
     content:'';
     position:absolute;
     z-index:1;
@@ -55,82 +57,86 @@
     background:inherit;
 }
 /* Bun bottom */
-.nav-wrap .burger > div:after {
+.mobile-nav .burger > div:after {
     top:10px;
 }
 
 /* --- Hamburger Menu Animations --- */
 /* rotate burger on click */
-.nav-wrap .open-nav:checked + .burger > div {
+.mobile-nav .open-nav:checked + .burger > div {
     transform: rotate(135deg);
 }
 /* turn hamburger into x */
-.nav-wrap .open-nav:checked + .burger > div:before,
-.nav-wrap .open-nav:checked + .burger > div:after {
+.mobile-nav .open-nav:checked + .burger > div:before,
+.mobile-nav .open-nav:checked + .burger > div:after {
     top: 0;
     transform: rotate(90deg);
 }
-
-/* rotate x on hover */
-.nav-wrap .open-nav:checked:hover + .burger > div {
-    transform: rotate(225deg);
-}
 /* animate menu */
-.nav-wrap .open-nav:checked ~ .nav {
+.mobile-nav .open-nav:checked ~ .nav {
     visibility: visible;
 }
-.nav-wrap .open-nav:checked ~ .nav > div {
+.mobile-nav .open-nav:checked ~ .nav > div {
     transform:scale(1);
     transition-duration:var(--menu-speed);
 }
-.nav-wrap .open-nav:checked ~ .nav > div > div {
+.mobile-nav .open-nav:checked ~ .nav > div > div {
     opacity: 1;
     transition:opacity 0.4s ease;
 }
-.nav-wrap .nav {
+.mobile-nav .nav {
     position: fixed;
     top: 0;
     left: 0;
     width:100%;
     height:100%;
-    visibility: hidden;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.nav-wrap .nav > div {
-    background: var(--menu-background);
-    border-radius: 50%;
-    width: 200vw;
-    height: 200vw;
+    visibility:hidden;
+    overflow:hidden;
     display:flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    transition: all 0.4s ease;
+    align-items:center;
+    justify-content:center;
 }
-.nav-wrap .nav > div > div {
+.mobile-nav .nav > div {
+    background: var(--menu-background);
+    border-radius:50%;
+    width:200vw;
+    height:200vw;
+    display:flex;
+    flex:none;
+    align-items:center;
+    justify-content:center;
+    transform:scale(0);
+    transition:all 0.4s ease-in-out;
+}
+.mobile-nav .nav > div > div {
     text-align:center;
     max-width:90vw;
     max-height:100vh;
     opacity:0;
-    transition: opacity 0.5s ease;
+    transition:opacity 0.5s ease;
 }
-.nav-wrap .nav > div > div > ul > li {
+.mobile-nav .nav > div > div > ul > li {
     list-style:none;
     color: var(--burger-color);
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size:1.5rem;
+    padding:1rem;
 }
-.nav-wrap .nav > div > div > ul > li > a {
+.mobile-nav .nav > div > div > ul > li > a {
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
 }
 @media only screen and (min-width: 1024px) {
-    /* .nav-wrap {
+    .mobile-nav {
         display:none;
-    } */
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .nav > div > div > ul {
+        display: block;
+    }
+
+    .nav > div > div > ul {
+        display: inline;
+    }
 }

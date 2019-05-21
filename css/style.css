@@ -10,31 +10,32 @@
 }
 /* --- General Style --- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family:Catamaran, Helvetica, Arial sans-serif;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    color: #fff;
 }
-body {
-    font-family: Catamaran, Helvetica, Arial sans-serif;
-    line-height: 1.2;
+html {
+    scroll-behavior: smooth;
 }
 /* --- Landing Section --- */
 .container {
-    max-width: 960px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 3rem;
+    max-width:960px;
+    margin:auto;
+    overflow:hidden;
+    padding:0 3rem;
 }
-.landing {
+#landing {
     color:var(--font-color);
     height:100vh;
     position:relative;
-    background-color: var(--primary-color);
+    background-color:var(--primary-color);
 }
-.landing:before {
+#landing:before {
     content:'';
     /* Photo by Steve Johnson from pexels.com */
-    /* background:url(../images/abstract1-min.jpg) no-repeat center center/cover; */
+    background:url(../images/abstract1-med.jpg) no-repeat center center/cover;
     top:0;
     left:0;
     width:100%;
@@ -42,7 +43,7 @@ body {
     position:absolute;
     z-index:-1;
 }
-.landing .landing-inner {
+#landing .landing-inner {
     display:flex;
     flex-direction: column;
     align-items:center;
@@ -50,38 +51,38 @@ body {
     text-align:center;
     height:100%;
 }
-.landing h1 {
+#landing h1 {
     font-size: 3.2rem;
     padding-bottom:1rem;
     font-family: Philosopher, sans-serif;
 }
-.landing p {
+#landing p {
     padding-bottom:2.4rem;
     font-size:1.3rem;
 }
 .btn {
     border: none;
-    background-color: var(--primary-color);
-    color: var(--font-color);
+    background-color:var(--primary-color);
+    color:var(--font-color);
     padding:0.75em 1.5em;
     margin-top: 1rem;
     text-decoration:none;
-    transition: opacity 0.75s linear;
+    transition:opacity 0.75s ease-in;
 }
 .btn:hover {
-    opacity: 0.5;
+    opacity: 0.6;
 }
 /* --- About Section --- */
-.about {
-    color: var(--font-color);
+#about {
+    color:var(--font-color);
     height:100vh;
     position:relative;
-    background-color: var(--primary-color);
+    background-color:var(--primary-color);
 }
-.about:before {
+#about:before {
     content:'';
     /* Photo by Steve Johnson from pexels.com */
-    /* background:url(../images/abstract3-min.jpg) no-repeat center center/cover; */
+    background:url(../images/abstract3-med.jpg) no-repeat center center/cover;
     top:0;
     left:0;
     width:100%;
@@ -89,13 +90,27 @@ body {
     position:absolute;
     z-index:-1;
 }
+#about {
+    text-align:center;
+}
+#about > p {
+    font-size:1.4rem;
+}
+#about h2 {
+    padding-top:10vh;
+    font-size: 2.2rem;
+}
+#about h3 {
+    padding-top:5rem;
+    font-size: 2.2rem;
+}
 /* --- Footer --- */
 .footer {
-    background-color: var(--accent-color);
-    color: var(--font-color);
+    background-color:var(--accent-color);
+    color:var(--font-color);
     height:15vh;
     text-align:center;
 }
-.footer-name{
+.footer > p {
     padding-top:40px;
 }

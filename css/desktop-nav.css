@@ -1,0 +1,27 @@
+/* --- Desktop Navigation --- */
+.desktop-nav  {
+    background:var(--primary-color);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:6vh;
+    z-index:1;
+    display:flex;
+    align-items:center;
+}
+.desktop-nav > ul {
+    list-style:none;
+}
+.desktop-nav > ul > li {
+    display:inline;
+    padding: 0px 4rem;
+}
+.desktop-nav > ul > li > a {
+    text-decoration:none;
+}
+@media only screen and (max-width: 1024px) {
+    .desktop-nav {
+        display:none;
+    }
+}
