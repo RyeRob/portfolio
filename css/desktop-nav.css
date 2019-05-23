@@ -1,11 +1,16 @@
 /* --- Desktop Navigation --- */
+#logo-desktop {
+    width:225px;
+    height:auto;
+    margin-top:5px;
+}
 .desktop-nav  {
-    background:var(--primary-color);
+    background:var(--menu-background);
     position:fixed;
     top:0;
     left:0;
     width:100vw;
-    height:6vh;
+    height:50px;
     z-index:1;
     display:flex;
     align-items:center;
@@ -15,10 +20,31 @@
 }
 .desktop-nav > ul > li {
     display:inline;
-    padding: 0px 4rem;
+    padding: 0px 2.5rem;
+    font-size:1.1rem;
 }
 .desktop-nav > ul > li > a {
     text-decoration:none;
+}
+.site-links{
+    position:fixed;
+    top:0;
+    right:0;
+    list-style:none;
+    padding-right:5rem;
+    margin-top:5px;
+}
+.site-links li {
+    display: inline;
+    padding: 0px 2rem;
+}
+.git-icon {
+    width: 38px;
+    height:auto;
+}
+.linked-icon{
+    width:38px;
+    height:auto;
 }
 @media only screen and (max-width: 1024px) {
     .desktop-nav {

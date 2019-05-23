@@ -1,11 +1,11 @@
 /* --- Variables --- */
 :root {
     --primary-color:rgba(0, 0, 0, 0.8);
-    --accent-color:rgba(51, 153, 255, 1);
+    --accent-color:rgb(0, 127, 253);
     --font-color:#fff;
     --burger-color:#fff;
     --burger-background:rgba(0, 0, 0, 0.3);
-    --menu-background:rgb(0, 0, 0, 0.95);
+    --menu-background:rgb(0, 0, 0, 0.9);
     --menu-speed: 1.3s;
 }
 /* --- General Style --- */
@@ -75,7 +75,7 @@ html {
 /* --- About Section --- */
 #about {
     color:var(--font-color);
-    height:100vh;
+    min-height:100vh;
     position:relative;
     background-color:var(--primary-color);
 }
@@ -90,20 +90,46 @@ html {
     position:absolute;
     z-index:-1;
 }
-#about {
-    text-align:center;
+.about-wrap {
+    max-width: 960px;
+    margin:auto;
+    overflow: hidden;
 }
-#about > p {
-    font-size:1.4rem;
+.about-wrap > ul {
+    text-align:center;
+    list-style: none;
 }
 #about h2 {
-    padding-top:10vh;
-    font-size: 2.2rem;
+    padding-top:4rem;
+    padding-bottom:4rem;
+    font-size: 2.5rem;
+    text-align:center;
+    font-family:Philosopher, Arial, Helvetica, sans-serif;
 }
 #about h3 {
-    padding-top:5rem;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    color:#1dc5f8;
+    text-align:center;
+    padding-top:2rem;
+    padding-bottom:1.6rem;
+    font-family:Philosopher, Arial, Helvetica, sans-serif;
 }
+#about p {
+    font-size:1.4rem;   
+}
+.contact-info {
+    text-align:center;
+    font-size:1.3rem;
+    
+}
+.contact-info > ul {
+    padding-top: 1.8rem;
+    list-style:none;
+}
+/* .contact-info > ul > li {
+    padding:1rem;
+} */
+
 /* --- Footer --- */
 .footer {
     background-color:var(--accent-color);

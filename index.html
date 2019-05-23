@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ryan Robinson</title>
-    <link href="https://fonts.googleapis.com/css?family=Philosopher|Catamaran" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mobile-nav.css">
     <link rel="stylesheet" href="./css/desktop-nav.css">
@@ -13,20 +14,26 @@
 </head>
 <body>
     <nav class="desktop-nav">
-        <ul>
-            <li><a href="#landing" class="top-btn">Ryan Robinson</a></li>
-            <li><a href="#work" class="work-btn">Work</a></li>
-            <li><a href="#about" class="about-btn">About</a></li>
+        <a href="#landing"><img id="logo-desktop" src="./images/logo.png" alt="site logo"></a>
+        <ul class="section-links">
+            <li><a href="#landing">Ryan Robinson</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <ul class="site-links">
+            <li><a href="https://github.com/RyeRob"><img class="git-icon" src="./images/github-icon.png" alt="git hub icon"></a></li>
+            <li><a href="https://www.linkedin.com/in/ryanrobinson5/"><img class="linked-icon" src="./images/linkedin-icon.png" alt="linked in icon"></a></li>
         </ul>
     </nav>
     <div class="mobile-nav">
+        <img id="logo-mobile" src="./images/logo.png" alt="site logo">
         <input type="checkbox" class="open-nav">
         <div class="burger"><div></div></div>
         <div class="nav">
             <div>
                 <div>
                     <ul>
-                        <li><a href="#landing" class="top-btn">Ryan Robinson</a></li>
+                        <li><a href="#" class="top-btn">Top</a></li>
                         <li><a href="#work" class="work-btn">Work</a></li>
                         <li><a href="#about" class="about-btn">About</a></li>
                     </ul>
@@ -34,15 +41,15 @@
             </div>
         </div>
     </div>
-    <main >
+    <main>
         <section id="landing">
             <div class="container landing-inner">
                 <h1>Ryan Robinson</h1>
-                <p>Web Developer Based in Toronto.</p>
+                <h2>Web Developer Based in Toronto</h2>
                 <a href="#" class="main-btn btn">See Work</a>
             </div>
         </section>
-        <section id="work">
+        <section id="work" class="work">
             <h2>My Work</h2>
             <div class="work-1">
                     <a href="https://humbiehelper.skriptkaiju.com/">
@@ -50,62 +57,66 @@
                     </a>
                 <div class="work-desc">
                     <h3>Humbie Helper</h3>
-                    <p>This is a team project that is aimed to be help future students of this program. 
-                        We designed this app to be a organizational hub for group work with tools specifically geared to students in this program. 
-                    </p>
-                    <p>
-                        Technologies used:
-                        <ul>
-                            <li>HTML 5</li>
-                            <li>CSS 3</li>
-                            <li>Bootstrap</li>
-                            <li>PHP</li>
-                            <li>MySQL</li>
-                        </ul>
+                    <p>In this academic project I worked on a team with 3 other developers to 
+                       design an app which would help future students of the web development 
+                       program at Humber organize and complete work.
                     </p>
                 </div>
+            </div>
+            <div class="work-tech1 tech">
+                <h4>Technologies:</h4>
+                <p class="tech-list">HTML 5, CSS, Bootstrap 4, PHP and MySQL.</p>
             </div>
             <div class="work-2">
-                <div class="work-display">
-                    <a href="#"></a>
-                </div>
+                    <a href="https://stats-map.netlify.com/">
+                        <div class="work-display"></div>
+                    </a>
                 <div class="work-desc">
                     <h3>Stats Map</h3>
-                    <p>This is a map that </p>
+                    <p>This is an academic project in which I added some interesting country statistics
+                       to Google Maps using the rest countries API and open weather API.</p>
                 </div>
             </div>
+            <div class="work-tech2 tech">
+                    <h4>Technologies:</h4>
+                    <p class="tech-list">React, APIs, Netlify</p>
+                </div>
             <div class="work-3">
-                <div class="work-display">
-                    <a href="#"></a>
-                </div>
+                    <a href="http://ryerob.com/restaurant">
+                        <div class="work-display"></div>
+                    </a>
                 <div class="work-desc">
-                    <h3>Chat App</h3>
-                    <p>PHP, Javascript and XML Chat App</p>
+                    <h3>Restaurant Site</h3>
+                    <p>This is an academic project made in my first term at Humber. This was a team project 
+                       with 4 other students. I created the gift card images, gift card page and site map page.</p>
                 </div>
             </div>
+            <div class="work-tech3 tech">
+                    <h4>Technologies:</h4>
+                    <p class="tech-list">HTML, CSS, Javascript, Photoshop</p>
+                </div>
         </section>
         <section id="about">
-            <h2>About and Skills</h2>
-            <p>I'm Ryan Robinson, a full stack web developer from Toronto, Canada. I have a background in economics and international development.</p>
-            <ul>
-                <li>HTML 5</li>
-                <li>CSS 3</li>
-                <li>Javascript</li>
-                <li>PHP</li>
-                <li>Oracle SQL/MySQL</li>
-            </ul>
-            <h3>Tools</h3>
-            <ul>
-                <li>VS Code</li>
-                <li>Git Hub</li>
-                <li>Gulp</li>
-                <li>jQuery</li>
-                <li>Bootstrap</li>
-                <li>Material</li>
-                <li>Adobe Photoshop</li>
-                <li>Adobe XD</li>
-
-            </ul>
+            <div class="about-wrap">
+                <h2>About</h2>
+                <p>I am Ryan Robinson and I have been working on web development projects for one year as a student at Humber College. I love to learn and am interested in everything from graphic design to database design. When I’m not programming or designing, I’m likely skateboarding, watching documentaries or hanging out with friends and family.</p>
+                <h3>Skills</h3>
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>Javascript</li>
+                    <li>PHP</li>
+                    <li>C# ASP.NET</li>
+                    <li>MySQL, MSSQL and Oracle SQL</li>
+                </ul>
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <p>ryan@ryerob.com</p>
+                    <ul>
+                        <li><a href="https://github.com/RyeRob"><img class="git-icon" src="./images/github-icon.png" alt="git hub icon"></a></li>
+                        <li><a href="https://www.linkedin.com/in/ryanrobinson5/"><img class="linked-icon" src="./images/linkedin-icon.png" alt="linked in icon"></a></li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
