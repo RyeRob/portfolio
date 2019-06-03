@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ryan Robinson</title>
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stats-study.css">
+    <link rel="stylesheet" href="./css/mobile-nav.css">
+    <link rel="stylesheet" href="./css/desktop-nav.css">
+</head>
+<body>
+    <nav class="desktop-nav">
+        <a href="#landing"><img id="logo-desktop" src="./images/logo.png" alt="site logo"></a>
+        <ul class="section-links">
+            <li><a href="index.html#landing">Ryan Robinson</a></li>
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+        <ul class="site-links">
+            <li><a href="https://github.com/RyeRob"><img class="git-icon" src="./images/github-icon.png" alt="git hub icon"></a></li>
+            <li><a href="https://www.linkedin.com/in/ryanrobinson5/"><img class="linked-icon" src="./images/linkedin-icon.png" alt="linked in icon"></a></li>
+        </ul>
+    </nav>
+    <div class="mobile-nav">
+        <img id="logo-mobile" src="./images/logo.png" alt="site logo">
+        <input type="checkbox" class="open-nav">
+        <div class="burger"><div></div></div>
+        <div class="nav">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#" class="top-btn">Top</a></li>
+                        <li><a href="#work" class="work-btn">Work</a></li>
+                        <li><a href="#about" class="about-btn">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="wrap">
+        <article id="case-study">
+            <header>
+                <h1>Statistics Map Case Study</h1>
+            </header>
+            <div class="case-content">
+                <p>This project allows users to get weather and statistics from various sources in one place
+                     by clicking on a map. It was built using React and uses four APIs including Google Maps, 
+                     Google Geocoding, Open Weather and REST Countries. The application is still fairly basic 
+                     with the statistics it offers and options for viewing data, but I plan to continue to improve 
+                     it.
+                </p>
+                <img src="images/case-study3.png" alt="screen shot of the applications text search">
+                <p>This project started as an assignment in which we were to use at 
+                    least two APIs to create something that would have a theme and provide 
+                    some sort of value to the user. My idea was to make an interactive map 
+                    that would show statistics about different countries and local weather. 
+                    I often find myself wondering about different countries around the world 
+                    and how they compare to others in terms of size, population or other statistics. I always start
+                    by looking at Google Maps and getting a better idea of the geography of the area. I’m often curious to see which country in the area is more dense in population 
+                    or what languages they have in common. To do this I end up looking at many different websites 
+                    to get different information and directly comparing multiple statistics at the same time is difficult. This is 
+                    where the idea for the stats map came from. I wanted to have a Google Map that users could click 
+                    and instantly get many different statistics from multiple sources all on one page. 
+                </p>
+                <img src="images/case-study2.png" alt="screen shot of the applications text search">
+                <p> I started out by ensuring I was able to get the information I wanted from the APIs so 
+                    I implemented text search functionality. This was to test the API calls I was making. After 
+                    I got this working, I integrated the map and began working on being able to drop a pin to get location information. 
+                    I used a package called google-maps-react 
+                    (linked to on the GitHub of this project) to display the map. Going through the 
+                    documentation I figured out how to add marks to the map and get the latitude and longitude from the 
+                    placed marker. After that it was a matter of translating the latitude and longitude to a city and country
+                     name pair. For this I used Google’s Geocode API which then passes the country and city name to the 
+                     other APIs to get the weather of the nearest city and statistics for that country.
+                </p>
+                <img src="images/case-study1.png" alt="screen shot of the applications text search">
+                <p>I am still working on this application and experimenting with different APIs and data sources that interest 
+                    me. I think this could be the start of a useful mobile application for travelers to quickly get information
+                     all in one place. I have many ideas on how to improve the current version of this site and I look forward 
+                     to continuing to work on it.
+                </p>
+            </div>
+        </acticle>
+    </main>
+    <footer class="footer">
+        <p>&copy; Ryan Robinson <span>2019</span></p>
+    </footer>
+<script src="./javascript/main.js"></script>
+</body>
+</html>

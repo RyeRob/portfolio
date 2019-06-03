@@ -9,6 +9,9 @@
     grid-column-gap: 60px;
 
 }
+a {
+    text-decoration:none;
+}
 .work-image{
     flex-shrink:0;
     min-width:100%;
@@ -30,15 +33,31 @@
 }
 .work-1 .work-display {
     background:url(../images/humbieHelper.png) no-repeat center center/cover;
-
 }
 .work-2 .work-display {
     background:url(../images/stat-map-icon.png) no-repeat center center/cover;
-
 }
 .work-3 .work-display {
     background:url(../images/rest-land.png) no-repeat center center/cover;
-
+}
+.work-1 .work-display:hover,
+.work-2 .work-display:hover,
+.work-3 .work-display:hover {
+    background: rgba(250, 250, 250, 0.6);
+    transition: 1s;
+}
+.work-1 .work-display:hover .work-info,
+.work-2 .work-display:hover .work-info,
+.work-3 .work-display:hover .work-info {
+    display:block;
+}
+.work-info {
+    display:none;
+    text-align:center;
+    text-decoration: none;
+    color:#000;
+    vertical-align: middle;
+    font-size: 2rem;
 }
 #work:before {
     content:'';
@@ -72,8 +91,10 @@
     border-radius:30px;
     width:20vw;
     height:24vh;
+    line-height: 24vh;
     overflow:hidden;
     margin:0 auto;
+    text-align:center;
 }
 .work-desc {
     text-align:center;

@@ -14,10 +14,12 @@
     box-sizing:border-box;
     margin:0;
     padding:0;
-    color: #fff;
 }
 html {
     scroll-behavior: smooth;
+}
+body{
+    color: #fff;
 }
 /* --- Landing Section --- */
 .container {
@@ -126,13 +128,9 @@ html {
     padding-top: 1.8rem;
     list-style:none;
 }
-/* .contact-info > ul > li {
-    padding:1rem;
-} */
-
 /* --- Footer --- */
 .footer {
-    background-color:var(--accent-color);
+    background-color:var(--menu-background);
     color:var(--font-color);
     height:15vh;
     text-align:center;

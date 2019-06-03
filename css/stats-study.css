@@ -1,0 +1,57 @@
+:root {
+    --primary-color:rgba(0, 0, 0, 0.8);
+    --accent-color:rgb(0, 127, 253);
+    --font-color:#fff;
+    --burger-color:#fff;
+    --burger-background:rgba(0, 0, 0, 0.3);
+    --menu-background:rgb(0, 0, 0, 0.9);
+    --menu-speed: 1.3s;
+}
+* {
+    font-family:Catamaran, Helvetica, Arial sans-serif;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+.wrap {
+    min-height:100vh;
+}
+#case-study {
+    max-width:960px;
+    text-align:center;
+    color:#000;
+    margin:0 auto;
+    margin-top:100px;
+    margin-bottom:100px;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 
+                0 1px 10px 0 rgba(0,0,0,0.12), 
+                0 2px 4px -1px rgba(0,0,0,0.3);
+}
+#case-study > header > h1 {
+    padding-top:5rem;
+    font-size:2rem;
+}
+#case-study > div > p {
+    text-align: left;
+}
+#case-study > div > h2, p {
+    padding:4rem;
+}
+#case-study > div > img {
+    max-width: 50vw;
+    max-height: 50vh;
+    display:block;
+    margin:0 auto;
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
+
+.footer {
+    background-color:var(--menu-background);
+    color:var(--font-color);
+    height:15vh;
+    text-align:center;
+}
+.footer > p {
+    padding-top:40px;
+}

@@ -25,6 +25,10 @@
 }
 .desktop-nav > ul > li > a {
     text-decoration:none;
+    color:#fff;
+}
+.desktop-nav > ul > li > a:hover {
+    color:var(--accent-color);
 }
 .site-links{
     position:fixed;
