@@ -1,12 +1,3 @@
-:root {
-    --primary-color:rgba(0, 0, 0, 0.8);
-    --accent-color:rgb(0, 127, 253);
-    --font-color:#fff;
-    --burger-color:#fff;
-    --burger-background:rgba(0, 0, 0, 0.3);
-    --menu-background:rgb(0, 0, 0, 0.9);
-    --menu-speed: 1.3s;
-}
 * {
     font-family:Catamaran, Helvetica, Arial sans-serif;
     box-sizing:border-box;
@@ -44,14 +35,4 @@
     margin:0 auto;
     padding-top:3rem;
     padding-bottom:3rem;
-}
-
-.footer {
-    background-color:var(--menu-background);
-    color:var(--font-color);
-    height:15vh;
-    text-align:center;
-}
-.footer > p {
-    padding-top:40px;
 }

@@ -1,0 +1,48 @@
+/* --- Variables --- */
+:root {
+    --primary-color:rgba(0, 0, 0, 0.8);
+    --accent-color:rgb(0, 127, 253);
+    --font-color:#fff;
+    --burger-color:#fff;
+    --burger-background:rgba(0, 0, 0, 0.3);
+    --menu-background:rgb(0, 0, 0, 0.9);
+    --menu-speed: 1.3s;
+}
+/* --- General Style --- */
+* {
+    font-family:Catamaran, Helvetica, Arial sans-serif;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    color: #fff;
+}
+a {
+    text-decoration:none;
+}
+.btn {
+    border: none;
+    background-color:var(--primary-color);
+    color:var(--font-color);
+    padding:0.75em 1.5em;
+    margin-top: 1rem;
+    text-decoration:none;
+    transition:opacity 0.75s ease-in;
+}
+.btn:hover {
+    opacity: 0.6;
+}
+/* --- Footer --- */
+.footer {
+    background-color:var(--menu-background);
+    color:var(--font-color);
+    height:15vh;
+    text-align:center;
+}
+.footer > p {
+    padding-top:40px;
+}
